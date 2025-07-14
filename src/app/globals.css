@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /* Removed @apply bg-background to make the body background transparent */
+  @apply font-sans text-white antialiased; /* Keep other utilities */
+  margin: 0;
+  padding: 0;
+  background-color: transparent; /* Explicitly set body background to transparent */
+}
+
+h1, h2, h3, h4, h5, h6, .font-mono {
+  font-family: 'Fira Mono', 'JetBrains Mono', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', monospace;
+}
+
+/* Cosmic orbs and starfield (simple version, can be enhanced with canvas/particles.js) */
+.cosmic-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(2px);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.glass {
+  background: linear-gradient(135deg, rgba(168,139,250,0.2) 0%, rgba(236,72,153,0.2) 100%);
+  box-shadow: 0 8px 32px 0 rgba(168,139,250,0.2);
+  border: 1px solid rgba(168,139,250,0.3);
+  backdrop-filter: blur(12px);
+}
