@@ -3,7 +3,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import CosmicParticlesBackground from "@/app/CosmicParticlesBackground"; // Import your particle background component
+//import GalaxyBackground from "@/app/GalaxyBackground";
+import GalaxyBackground from "@/components/stars/galaxybg";
 
 export const metadata: Metadata = {
   title: "Cosmic Portfolio",
@@ -19,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
       </head>
       <body className="bg-background text-white min-h-screen flex flex-col relative"> {/* Added 'relative' to body */}
-        <CosmicParticlesBackground /> {/* Render the background component here */}
+        <GalaxyBackground /> {/* Render the galaxy background component here */}
         <Navbar />
         <main className="flex-1 z-10 relative">{children}</main> {/* Added z-index to main content */}
         <Footer />

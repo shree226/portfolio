@@ -1,8 +1,9 @@
 "use client"; // Keep this if you use client-side hooks or components like Framer Motion here
 import React from 'react';
 import { motion } from "framer-motion"; // Make sure framer-motion is installed: npm install framer-motion
-import CosmicParticlesBackground from './CosmicParticlesBackground'; // Import the new component
+import GalaxyBackground from '@/components/stars/galaxybg';
 
+//import GalaxyBackground from './GalaxyBackground';
 const socialLinks = [
     {
         name: "GitHub",
@@ -42,7 +43,7 @@ export default function Home() {
               // Or if you want a subtle background:
               // className="min-h-screen bg-black/50 flex flex-col justify-center items-center text-center py-24 md:py-32 relative overflow-hidden"
             >
-                <CosmicParticlesBackground /> {/* This will now correctly render the particles */}
+                
                 <div className="relative z-10 flex flex-col items-center justify-center w-full">
                     <p className="text-lg md:text-xl text-purple-400 font-mono mb-2">Welcome to my cosmic portfolio</p>
                     <h1 className="font-mono font-extrabold text-4xl md:text-6xl lg:text-7xl mb-2 bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 text-transparent bg-clip-text leading-tight">
@@ -76,7 +77,7 @@ export default function Home() {
 
             {/* ABOUT SECTION */}
             <section id="about" className="relative py-24 md:py-32 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center px-4">
-                <CosmicParticlesBackground /> {/* This will now correctly render the particles */}
+                
                 {/* 3+ Years Cosmic Ring */}
                 <div className="relative flex-shrink-0 flex items-center justify-center w-full md:w-1/2 mb-12 md:mb-0">
                     <div className="relative flex items-center justify-center">
@@ -112,28 +113,11 @@ export default function Home() {
                 </div>
             </section>
 
-            <motion.section
-                id="skills"
-                className="py-24 md:py-32 bg-gray-900 px-4"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-            >
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">Skills</h2>
-                <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-                    <motion.div className="bg-gray-800 px-6 py-4 rounded shadow text-cyan-400 font-semibold text-base md:text-lg" whileHover={{ scale: 1.1 }}>JavaScript</motion.div>
-                    <motion.div className="bg-gray-800 px-6 py-4 rounded shadow text-cyan-400 font-semibold text-base md:text-lg" whileHover={{ scale: 1.1 }}>TypeScript</motion.div>
-                    <motion.div className="bg-gray-800 px-6 py-4 rounded shadow text-cyan-400 font-semibold text-base md:text-lg" whileHover={{ scale: 1.1 }}>React</motion.div>
-                    <motion.div className="bg-gray-800 px-6 py-4 rounded shadow text-cyan-400 font-semibold text-base md:text-lg" whileHover={{ scale: 1.1 }}>Next.js</motion.div>
-                    <motion.div className="bg-gray-800 px-6 py-4 rounded shadow text-cyan-400 font-semibold text-base md:text-lg" whileHover={{ scale: 1.1 }}>Tailwind CSS</motion.div>
-                    <motion.div className="bg-gray-800 px-6 py-4 rounded shadow text-cyan-400 font-semibold text-base md:text-lg" whileHover={{ scale: 1.1 }}>Node.js</motion.div>
-                </div>
-            </motion.section>
+            
 
             {/* PROJECTS SECTION */}
             <section id="projects" className="relative py-24 md:py-32 max-w-6xl mx-auto px-4">
-                <CosmicParticlesBackground /> {/* This will now correctly render the particles */}
+                
                 <div className="flex flex-col items-center mb-8">
                     <span className="inline-block px-4 py-1 mb-2 bg-purple-900/60 text-purple-300 font-mono rounded-full text-sm">My Work</span>
                     <h2 className="font-mono font-extrabold text-4xl md:text-5xl text-purple-400 mb-2 underline underline-offset-8 decoration-purple-500">Stellar Projects</h2>
@@ -189,7 +173,7 @@ export default function Home() {
 
             {/* OPEN SOURCE SECTION */}
             <section id="contributions" className="relative py-24 md:py-32 max-w-6xl mx-auto px-4">
-                <CosmicParticlesBackground /> {/* This will now correctly render the particles */}
+                
                 <div className="flex flex-col items-center mb-8">
                     <span className="inline-block px-4 py-1 mb-2 bg-purple-900/60 text-purple-300 font-mono rounded-full text-sm">Contributions</span>
                     <h2 className="font-mono font-extrabold text-4xl md:text-5xl text-pink-400 mb-2 underline underline-offset-8 decoration-purple-500">Open Source Impact</h2>
@@ -216,7 +200,7 @@ export default function Home() {
 
             {/* CONTACT SECTION */}
             <section id="contact" className="relative py-24 md:py-32 max-w-6xl mx-auto px-4">
-                <CosmicParticlesBackground /> {/* This will now correctly render the particles */}
+               
                 <div className="flex flex-col md:flex-row items-start justify-between gap-12">
                     {/* Left: Contact Info */}
                     <div className="w-full md:w-1/2 mb-12 md:mb-0">
